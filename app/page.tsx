@@ -6,6 +6,7 @@ import { client } from "../lib/sanity.client";
 import PreviewSuspense from "../components/PreviewSuspense";
 import Notes from "../components/Notes";
 import PreviewNotes from "../components/PreviewNotes";
+import Link from "next/link";
 const query = groq`*[_type == "note"]`;
 
 export default async function Home() {
@@ -13,6 +14,7 @@ export default async function Home() {
     return (
       <PreviewSuspense fallback={<h1>Loading...</h1>}>
         <PreviewNotes query={query} />
+        <Link href="/api/exit-preview">Exit preview</Link>
       </PreviewSuspense>
     );
   }
