@@ -19,6 +19,7 @@
 .DS_Store
 *.pem
 
+
 # debug
 npm-debug.log*
 yarn-debug.log*
@@ -30,6 +31,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+.vscode
 
 # typescript
 *.tsbuildinfo
