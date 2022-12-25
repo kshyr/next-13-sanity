@@ -11,7 +11,9 @@ export const getDefaultDocumentNode: DefaultDocumentNodeResolver = (
       S.view
         .component(IFrame)
         .options({
-          url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/preview`,
+          url: `${
+            process.env.NEXT_PUBLIC_VERCEL_URL || "localhost:3000"
+          }/api/preview`,
           defaultSize: "desktop",
           reload: {
             button: true,
